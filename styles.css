@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 62.5%;
+	--Cyan: hsl(179, 62%, 43%);
+	--Cyan2: hsl(179, 62%, 48%);
+	--BrightYellow: hsl(71, 73%, 54%);
+
+	--LightGray: hsl(204, 43%, 93%);
+	--GrayishBlue: hsl(218, 22%, 67%);
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	font-family: "Karla", sans-serif;
+	background-color: var(--LightGray);
+	padding: 2rem;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 30rem;
+	display: grid;
+	border-radius: 0.5rem;
+}
+
+article {
+	padding: 3rem;
+}
+
+.intro {
+	background-color: #fff;
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.intro .header {
+	color: var(--Cyan);
+	margin-bottom: 2rem;
+}
+
+.guarantee {
+	color: var(--BrightYellow);
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+}
+
+.description {
+	font-size: 1.2rem;
+	color: var(--GrayishBlue);
+	line-height: 2;
+}
+
+.subscription {
+	background-color: var(--Cyan);
+}
+
+.sub-header {
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 600;
+	margin-bottom: 2rem;
+}
+
+.price {
+	font-size: 2.8rem;
+	font-weight: 900;
+	margin-bottom: 0.8rem;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.price span {
+	font-size: 1.3rem;
+	font-weight: 100;
+	opacity: 0.7;
+}
+
+.sub-details {
+	color: #fff;
+	font-size: 1.3rem;
+	font-weight: 100;
+	margin-bottom: 2rem;
+}
+
+.subscription button {
+	background-color: var(--BrightYellow);
+	width: 100%;
+	height: 4rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-family: "Karla", sans-serif;
+	color: #fff;
+	font-weight: 900;
+	cursor: pointer;
+	max-width: 20rem;
+
+	box-shadow: 0 7px 17px -10px rgba(0, 0, 0, 0.75);
+}
+
+.text {
+	background-color: var(--Cyan2);
+	border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.text .header {
+	color: #fff;
+	margin-bottom: 2rem;
+}
+
+.text p {
+	line-height: 1.7;
+	font-size: 1.1rem;
+	color: var(--LightGray);
+}
+
+.attribution {
+	font-size: 1.6rem;
+	font-weight: 700;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 800px) {
+	.container {
+		width: 55rem;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	.intro {
+		grid-column: span 2;
+	}
+
+	.intro .header {
+		font-size: 1.8rem;
+	}
+
+	.guarantee {
+		font-size: 1.4rem;
+	}
+
+	.description {
+		font-size: 1.4rem;
+	}
+
+	.text {
+		background-color: var(--Cyan2);
+		border-radius: 0 0 0.5rem 0;
+	}
+
+	.subscription {
+		background-color: var(--Cyan);
+		border-radius: 0 0 0 0.5rem;
+	}
+}
